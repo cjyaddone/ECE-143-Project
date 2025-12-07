@@ -169,14 +169,14 @@ if st.button("Predict Sleep Quality 😴"):
     st.write("---")
 
     # ===========================================================
-    # NEW FEATURE: Personalized Improvement Suggestions
+    # Personalized Improvement Suggestions
     # ===========================================================
 
     st.subheader("💡 How You Can Improve Your Sleep Score")
 
     suggestions = []
 
-    # ---- Sleep Duration suggestion ----
+    # Sleep Duration suggestion
     if sleep_duration < 7:
         suggestions.append(
             f"- Increase your sleep duration closer to **7–8 hours**. You currently sleep **{sleep_duration} hours**."
@@ -189,7 +189,7 @@ if st.button("Predict Sleep Quality 😴"):
     else:
         suggestions.append(f"- Your sleep duration (**{sleep_duration} hours**) is healthy.")
 
-    # ---- Dynamic second feature suggestion ----
+    # Dynamic second feature suggestion
     value = input_df[second_feature].iloc[0]
 
     if second_feature == "Stress Level":
